@@ -41,7 +41,7 @@ XnCallbackHandle UserGenerator_RegisterUserCallbacks_wrapped(xn::UserGenerator& 
 void UserGenerator_UnregisterUserCallbacks_wrapped(xn::UserGenerator& self, XnCallbackHandle handle);
 
 /** Internal callback implementations **/
-void NewUser_callback(xn::UserGenerator& src, XnUserID user, void* cookie);
-void LostUser_callback(xn::UserGenerator& src, XnUserID user, void* cookie);
+void XN_CALLBACK_TYPE NewUser_callback(xn::UserGenerator& src, XnUserID user, void* cookie);
+void XN_CALLBACK_TYPE LostUser_callback(xn::UserGenerator& src, XnUserID user, void* cookie);
 
 #endif	/* USER_GENERATOR_WRAPPER_H */

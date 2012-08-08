@@ -38,6 +38,6 @@ void PoseDetectionCapability_UnregisterOutOfPoseCallback(xn::PoseDetectionCapabi
 
 
 /** Internal callback implementations **/
-void PoseDetectionCapability_PoseDetection_cb(xn::PoseDetectionCapability& src, const XnChar* pose, XnUserID user, void* cookie);
+void XN_CALLBACK_TYPE PoseDetectionCapability_PoseDetection_cb(xn::PoseDetectionCapability& src, const XnChar* pose, XnUserID user, void* cookie);
 
 #endif	/* POSE_DETECTION_CAPABILITY_WRAPPER_H */

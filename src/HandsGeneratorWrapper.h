@@ -33,8 +33,8 @@ XnCallbackHandle HandsGenerator_RegisterHandCallbacks_wrapped(xn::HandsGenerator
 void HandsGenerator_StartTracking_wrapped(xn::HandsGenerator& self, BP::list point);
 
 /** Internal callback implementations **/
-void Create_callback(xn::HandsGenerator& src, XnUserID user, const XnPoint3D *pPosition, XnFloat fTime, void* cookie);
-void Update_callback(xn::HandsGenerator& src, XnUserID user, const XnPoint3D *pPosition, XnFloat fTime, void* cookie);
-void Destroy_callback(xn::HandsGenerator& src, XnUserID user, XnFloat fTime, void* cookie);
+void XN_CALLBACK_TYPE Create_callback(xn::HandsGenerator& src, XnUserID user, const XnPoint3D *pPosition, XnFloat fTime, void* cookie);
+void XN_CALLBACK_TYPE Update_callback(xn::HandsGenerator& src, XnUserID user, const XnPoint3D *pPosition, XnFloat fTime, void* cookie);
+void XN_CALLBACK_TYPE Destroy_callback(xn::HandsGenerator& src, XnUserID user, XnFloat fTime, void* cookie);
 
 #endif	/* HANDS_GENERATOR_WRAPPER_H */

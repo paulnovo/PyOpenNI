@@ -137,14 +137,14 @@ XnSkeletonJointTransformation SkeletonCapability_GetJoint_wrapped(xn::SkeletonCa
 
 /** Internal callback implementations **/
 
-void SkeletonCapability_CalibrationStart_cb(xn::SkeletonCapability &src, XnUserID user, void *cookie) {
+void XN_CALLBACK_TYPE SkeletonCapability_CalibrationStart_cb(xn::SkeletonCapability &src, XnUserID user, void *cookie) {
     BP::object& func = *((BP::object*)cookie);
     
     func(src, user);
 }
 
 //This is used for both CalibrationInProgress and CalibrationCompleted
-void SkeletonCapability_CalibrationStatus_cb(xn::SkeletonCapability &src, XnUserID user, XnCalibrationStatus status, void *cookie) {
+void XN_CALLBACK_TYPE SkeletonCapability_CalibrationStatus_cb(xn::SkeletonCapability &src, XnUserID user, XnCalibrationStatus status, void *cookie) {
     BP::object& func = *((BP::object*)cookie);
     
     func(src, user, status);
