@@ -50,4 +50,6 @@ void DepthGenerator_Create_wrapped(xn::DepthGenerator& self, xn::Context& ctx);
 BP::list DepthGenerator_ToRealWorld(xn::DepthGenerator& self, BP::list point);
 BP::list DepthGenerator_ToProjective(xn::DepthGenerator& self, BP::list point);
 
+BP::list DepthGenerator_FieldOfView(xn::DepthGenerator& self);
+
 #endif    // DEPTH_GENERATOR_WRAPPER_H

@@ -187,3 +187,14 @@ BP::list DepthGenerator_ToProjective(xn::DepthGenerator& self, BP::list points) 
     
     return pros;
 }
+
+BP::list DepthGenerator_FieldOfView(xn::DepthGenerator& self)
+{
+    XnFieldOfView fov;
+    check( self.GetFieldOfView(fov) );
+
+    BP::list fov_list;
+    fov_list.append(fov.fHFOV);
+    fov_list.append(fov.fVFOV);
+    return fov_list;
+}

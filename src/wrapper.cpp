@@ -724,6 +724,8 @@ BOOST_PYTHON_MODULE(openni) {
             .def("to_real_world", &DepthGenerator_ToRealWorld)
             .def("to_projective", &DepthGenerator_ToProjective)
 
+            .def("field_of_view", &DepthGenerator_FieldOfView)
+
             .add_property("metadata",
                     make_function(&DepthGenerator_GetMetaData_wrapped,
                     return_value_policy<manage_new_object>()))
